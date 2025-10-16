@@ -1,6 +1,8 @@
 const express = require('express')
 const app = express()
+const cors = require ('cors')
 app.use(express.json())
+app.use(cors())
 
 //endpoint para atender um get oi: http://localhost:3000/oi
 app.get('/oi', (req, resp) => {resp.send('oi')})
